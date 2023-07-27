@@ -1,6 +1,6 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 const ViewLevelComponent = (props) => {
   const {
@@ -15,8 +15,11 @@ const ViewLevelComponent = (props) => {
   } = props;
   return (
     <>
-      <div
+      <motion.div
         className={`text-white ${background} h-screen w-full absolute top-0 left-0 z-20`}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.2, transition: "easeInOut" }}
       >
         <div className="grid place-content-center">
           <div className="p-5 h-[70px] w-full md:p-0 md:mt-10 flex items-end">
@@ -46,7 +49,7 @@ const ViewLevelComponent = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

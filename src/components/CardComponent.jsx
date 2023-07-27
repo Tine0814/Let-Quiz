@@ -11,7 +11,7 @@ const CardComponent = (props) => {
           className={`relative cursor-pointer text-white w-full md:max-w-[700px] flex flex-col gap-2 p-5 ${background} rounded-3xl shadow-lg`}
           onClick={onClick}
           whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.1 }}
         >
           <div className="border-2 shadow-sm border-white h-[40px] w-[40px] flex justify-center items-center rounded-xl">
             {icon}
