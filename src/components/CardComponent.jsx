@@ -8,7 +8,7 @@ const CardComponent = (props) => {
     <>
       <div className="p-5 w-full flex justify-center ">
         <motion.div
-          className={`relative text-white w-full md:max-w-[700px] flex flex-col gap-2 p-5 ${background} rounded-3xl shadow-lg`}
+          className={`relative cursor-pointer text-white w-full md:max-w-[700px] flex flex-col gap-2 p-5 ${background} rounded-3xl shadow-lg`}
           onClick={onClick}
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.4 }}

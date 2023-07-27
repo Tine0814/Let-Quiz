@@ -21,7 +21,7 @@ const ViewLevelComponent = (props) => {
         <div className="grid place-content-center">
           <div className="p-5 h-[70px] w-full md:p-0 md:mt-10 flex items-end">
             <div
-              className="border-2 rounded-full text-white grid place-content-center w-[30px] h-[30px]"
+              className="border-2 cursor-pointer rounded-full text-white grid place-content-center w-[30px] h-[30px]"
               onClick={onClick}
             >
               <CloseIcon />
