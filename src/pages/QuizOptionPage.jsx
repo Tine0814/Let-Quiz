@@ -12,9 +12,21 @@ import Lottie from "lottie-react";
 import commingsoon from "../assets/lottie/commingsoon.json";
 import codingIsFun from "../assets/img/codingIsFun.png";
 import ButtonComponent from "../components/button/ButtonComponent";
+import useLoading from "../hooks/useLoading";
+import { useNavigate } from "react-router-dom";
 
 const QuizOptionPage = () => {
   const [pickLevel, setPickLevel] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const ButtonClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate("Newbie-Quiz");
+    }, 2000);
+  };
 
   const ShowQuizLevel = () => {
     pickLevel === 0
@@ -25,7 +37,12 @@ const QuizOptionPage = () => {
         <ViewLevelComponent
           background="bg-gradient-to-r from-[#eec746] to-[#d7cc52]"
           img={codingIsFun}
-          button={<ButtonComponent />}
+          button={
+            <ButtonComponent
+              label={loading ? "Loading..." : "Game"}
+              onClick={ButtonClick}
+            />
+          }
           level="Level 1"
           title="JavaScript Newbie"
           description="Ready for the Challenge? Test Your Basic JavaScript Knowledge in
