@@ -41,6 +41,7 @@ const QuizOptionPage = () => {
             <ButtonComponent
               label={loading ? "Loading..." : "Game"}
               onClick={ButtonClick}
+              background="bg-clip-text bg-gradient-to-r from-[#eec746] to-[#d7cc52]"
             />
           }
           level="Level 1"

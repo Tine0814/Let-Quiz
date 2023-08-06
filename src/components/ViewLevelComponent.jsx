@@ -12,6 +12,7 @@ const ViewLevelComponent = (props) => {
     img,
     lottie,
     button,
+    countdown,
   } = props;
   return (
     <>
@@ -32,6 +33,7 @@ const ViewLevelComponent = (props) => {
           </div>
 
           <div className="flex flex-col gap-10 max-w-[600px] ">
+            <div>{countdown}</div>
             <div className="flex justify-center">
               <img src={img} alt="" width={250} />
             </div>
