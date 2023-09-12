@@ -56,6 +56,13 @@ const NewbieQuizPage = () => {
       questionNumber: "Question 3",
       question: `What is the correct syntax for referring to an external script called "index.js"?`,
       A: [`A. <script href="index.js">`, false],
+      B: [`B. <script name="index.js">`, false],
+      C: [`C. <script src="index.js">`, true],
+    },
+    {
+      questionNumber: "Question 4",
+      question: `What is the correct syntax for referring to an external script called "index.js"?`,
+      A: [`A. <script href="index.js">`, false],
       B: [`B. <script name="xxx.js">`, false],
       C: [`C. <script src="index.js">`, true],
     },
@@ -65,7 +72,13 @@ const NewbieQuizPage = () => {
     <>
       {question < questions.length ? (
         <ViewLevelComponent
-          countdown={<div>Countdown: {countdown} seconds</div>}
+          countdown={
+            <div className="text-black flex justify-center">
+              <div className="shadow-lg text-center py-3 font-bold bg-white h-[50px] w-[50px] rounded-full">
+                {countdown}
+              </div>
+            </div>
+          }
           background="bg-gradient-to-r from-[#eec746] to-[#d7cc52]"
           level="Level 1"
           title={questions[question].questionNumber}
